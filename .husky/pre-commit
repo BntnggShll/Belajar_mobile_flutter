@@ -1,4 +1,0 @@
-echo "Running Flutter pre-commit hook..."
-dart format --set-exit-if-changed .
-flutter analyze
-flutter test

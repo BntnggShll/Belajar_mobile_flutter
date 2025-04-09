@@ -1,0 +1,16 @@
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - ./testRunner.sh  ## This is your shell file path which has test execution command
+    
+  tags:
+    - testRunnerMachine
+  
+  artifacts:   ## Stroing the xml report as artifacts
+    when: always
+    reports:
+      junit:
+        - junit-report.xml
